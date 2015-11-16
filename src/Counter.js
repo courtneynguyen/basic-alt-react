@@ -1,10 +1,10 @@
-var React = require('react');
+import React, {Component} from 'react';
 import CounterActions from './CounterActions';
 
-var Counter = React.createClass({
+var Counter = class Counter extends Component{
 	handleClick(){
 		CounterActions.incrementCounter(1);
-	},
+	}
 	render(){
 		return (
 		<div>
@@ -12,6 +12,6 @@ var Counter = React.createClass({
 			<button onClick={this.handleClick}>Increment Counter</button>
 		</div>
 	)}
-});
+}
 
 module.exports = Counter;

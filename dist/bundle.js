@@ -19664,6 +19664,10 @@
 
 	var _CounterStore2 = _interopRequireDefault(_CounterStore);
 
+	var _Counter = __webpack_require__(198);
+
+	var _Counter2 = _interopRequireDefault(_Counter);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19671,9 +19675,9 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	// var Counter = require('./Counter.jsx');
 
-	var Counter = __webpack_require__(175);
-	var AltContainer = __webpack_require__(176);
+	var AltContainer = __webpack_require__(175);
 
 	var App = (function (_Component) {
 		_inherits(App, _Component);
@@ -19690,7 +19694,7 @@
 				return _react2.default.createElement(
 					AltContainer,
 					{ store: _CounterStore2.default },
-					_react2.default.createElement(Counter, null)
+					_react2.default.createElement(_Counter2.default, null)
 				);
 			}
 		}]);
@@ -21384,51 +21388,11 @@
 /* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	module.exports = __webpack_require__(176)
 
-	var _CounterActions = __webpack_require__(174);
-
-	var _CounterActions2 = _interopRequireDefault(_CounterActions);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var React = __webpack_require__(1);
-
-	var Counter = React.createClass({
-		displayName: 'Counter',
-		handleClick: function handleClick() {
-			_CounterActions2.default.incrementCounter(1);
-		},
-		render: function render() {
-			return React.createElement(
-				'div',
-				null,
-				React.createElement(
-					'h1',
-					null,
-					'Counter: ',
-					this.props.counter.count
-				),
-				React.createElement(
-					'button',
-					{ onClick: this.handleClick },
-					'Increment Counter'
-				)
-			);
-		}
-	});
-
-	module.exports = Counter;
 
 /***/ },
 /* 176 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__(177)
-
-
-/***/ },
-/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*eslint-disable*/
@@ -21488,8 +21452,8 @@
 	 *
 	 * Full docs available at http://goatslacker.github.io/alt/
 	 */
-	var React = __webpack_require__(178)
-	var mixinContainer = __webpack_require__(197)
+	var React = __webpack_require__(177)
+	var mixinContainer = __webpack_require__(196)
 	var assign = __webpack_require__(167).assign
 
 	var AltContainer = React.createClass(assign({
@@ -21504,7 +21468,7 @@
 
 
 /***/ },
-/* 178 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21519,11 +21483,11 @@
 	  'Access using require' + "('react-addons-{addon}') instead."
 	);
 
-	module.exports = __webpack_require__(179);
+	module.exports = __webpack_require__(178);
 
 
 /***/ },
-/* 179 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -21546,17 +21510,17 @@
 
 	'use strict';
 
-	var LinkedStateMixin = __webpack_require__(180);
+	var LinkedStateMixin = __webpack_require__(179);
 	var React = __webpack_require__(2);
-	var ReactComponentWithPureRenderMixin = __webpack_require__(183);
-	var ReactCSSTransitionGroup = __webpack_require__(185);
-	var ReactFragment = __webpack_require__(191);
-	var ReactTransitionGroup = __webpack_require__(186);
+	var ReactComponentWithPureRenderMixin = __webpack_require__(182);
+	var ReactCSSTransitionGroup = __webpack_require__(184);
+	var ReactFragment = __webpack_require__(190);
+	var ReactTransitionGroup = __webpack_require__(185);
 	var ReactUpdates = __webpack_require__(54);
 
-	var cloneWithProps = __webpack_require__(192);
-	var shallowCompare = __webpack_require__(184);
-	var update = __webpack_require__(195);
+	var cloneWithProps = __webpack_require__(191);
+	var shallowCompare = __webpack_require__(183);
+	var update = __webpack_require__(194);
 	var warning = __webpack_require__(25);
 
 	var warnedAboutBatchedUpdates = false;
@@ -21582,14 +21546,14 @@
 
 	if (process.env.NODE_ENV !== 'production') {
 	  React.addons.Perf = __webpack_require__(142);
-	  React.addons.TestUtils = __webpack_require__(196);
+	  React.addons.TestUtils = __webpack_require__(195);
 	}
 
 	module.exports = React;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21606,8 +21570,8 @@
 
 	'use strict';
 
-	var ReactLink = __webpack_require__(181);
-	var ReactStateSetters = __webpack_require__(182);
+	var ReactLink = __webpack_require__(180);
+	var ReactStateSetters = __webpack_require__(181);
 
 	/**
 	 * A simple mixin around ReactLink.forState().
@@ -21630,7 +21594,7 @@
 	module.exports = LinkedStateMixin;
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21704,7 +21668,7 @@
 	module.exports = ReactLink;
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports) {
 
 	/**
@@ -21813,7 +21777,7 @@
 	module.exports = ReactStateSetters;
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21829,7 +21793,7 @@
 
 	'use strict';
 
-	var shallowCompare = __webpack_require__(184);
+	var shallowCompare = __webpack_require__(183);
 
 	/**
 	 * If your React component's render function is "pure", e.g. it will render the
@@ -21864,7 +21828,7 @@
 	module.exports = ReactComponentWithPureRenderMixin;
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21893,7 +21857,7 @@
 	module.exports = shallowCompare;
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21914,8 +21878,8 @@
 
 	var assign = __webpack_require__(39);
 
-	var ReactTransitionGroup = __webpack_require__(186);
-	var ReactCSSTransitionGroupChild = __webpack_require__(188);
+	var ReactTransitionGroup = __webpack_require__(185);
+	var ReactCSSTransitionGroupChild = __webpack_require__(187);
 
 	function createTransitionTimeoutPropValidator(transitionType) {
 	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
@@ -21981,7 +21945,7 @@
 	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -21998,7 +21962,7 @@
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var ReactTransitionChildMapping = __webpack_require__(187);
+	var ReactTransitionChildMapping = __webpack_require__(186);
 
 	var assign = __webpack_require__(39);
 	var emptyFunction = __webpack_require__(15);
@@ -22191,7 +22155,7 @@
 	module.exports = ReactTransitionGroup;
 
 /***/ },
-/* 187 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22294,7 +22258,7 @@
 	module.exports = ReactTransitionChildMapping;
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22314,8 +22278,8 @@
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(3);
 
-	var CSSCore = __webpack_require__(189);
-	var ReactTransitionEvents = __webpack_require__(190);
+	var CSSCore = __webpack_require__(188);
+	var ReactTransitionEvents = __webpack_require__(189);
 
 	var onlyChild = __webpack_require__(156);
 
@@ -22459,7 +22423,7 @@
 	module.exports = ReactCSSTransitionGroupChild;
 
 /***/ },
-/* 189 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22562,7 +22526,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 190 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22676,7 +22640,7 @@
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 191 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22746,7 +22710,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 192 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -22764,7 +22728,7 @@
 	'use strict';
 
 	var ReactElement = __webpack_require__(42);
-	var ReactPropTransferer = __webpack_require__(193);
+	var ReactPropTransferer = __webpack_require__(192);
 
 	var keyOf = __webpack_require__(79);
 	var warning = __webpack_require__(25);
@@ -22806,7 +22770,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 193 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -22824,7 +22788,7 @@
 
 	var assign = __webpack_require__(39);
 	var emptyFunction = __webpack_require__(15);
-	var joinClasses = __webpack_require__(194);
+	var joinClasses = __webpack_require__(193);
 
 	/**
 	 * Creates a transfer strategy that will merge prop values using the supplied
@@ -22919,7 +22883,7 @@
 	module.exports = ReactPropTransferer;
 
 /***/ },
-/* 194 */
+/* 193 */
 /***/ function(module, exports) {
 
 	/**
@@ -22963,7 +22927,7 @@
 	module.exports = joinClasses;
 
 /***/ },
-/* 195 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -23076,7 +23040,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 196 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -23552,11 +23516,11 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ },
-/* 197 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*eslint-disable*/
-	var Subscribe = __webpack_require__(198)
+	var Subscribe = __webpack_require__(197)
 	var assign = __webpack_require__(167).assign
 
 	function id(it) {
@@ -23736,7 +23700,7 @@
 
 
 /***/ },
-/* 198 */
+/* 197 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -23762,6 +23726,70 @@
 
 	module.exports = Subscribe
 
+
+/***/ },
+/* 198 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _CounterActions = __webpack_require__(174);
+
+	var _CounterActions2 = _interopRequireDefault(_CounterActions);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Counter = (function (_Component) {
+		_inherits(Counter, _Component);
+
+		function Counter() {
+			_classCallCheck(this, Counter);
+
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Counter).apply(this, arguments));
+		}
+
+		_createClass(Counter, [{
+			key: 'handleClick',
+			value: function handleClick() {
+				_CounterActions2.default.incrementCounter(1);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(
+						'h1',
+						null,
+						'Counter: ',
+						this.props.counter.count
+					),
+					_react2.default.createElement(
+						'button',
+						{ onClick: this.handleClick },
+						'Increment Counter'
+					)
+				);
+			}
+		}]);
+
+		return Counter;
+	})(_react.Component);
+
+	module.exports = Counter;
 
 /***/ }
 /******/ ]);

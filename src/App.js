@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CounterStore from './CounterStore';
-var Counter = require('./Counter.jsx');
+// var Counter = require('./Counter.jsx');
+import Counter from './Counter';
 var AltContainer = require('alt/AltContainer');
 
 
