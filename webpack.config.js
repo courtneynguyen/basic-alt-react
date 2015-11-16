@@ -1,6 +1,6 @@
 var path = require('path');
 module.exports = {
-    entry: "./src/index",
+    entry: "./src/Index",
     output: {
         path: __dirname + "/dist",
         filename: "bundle.js"
@@ -15,7 +15,16 @@ module.exports = {
 					query: {
 						presets: ['react', 'es2015']
 					}
-            }
+            },
+				{
+					test: /\.jsx$/,
+					exclude: /node_modules/,
+					loader: "babel",
+					include: path.join(__dirname, 'src'),
+					query: {
+						presets: ['react', 'es2015']
+					}
+				}
         ]
     }
 };

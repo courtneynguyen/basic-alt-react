@@ -1,24 +1,27 @@
-import alt from './alt';
-import CounterActions from './CounterActions';
+var alt = require('./alt');
+var CounterActions = require('./CounterActions');
 
 class CounterStore {
-	constructor(){
-		this.counter = {count: 0};
+  constructor() {
+    this.counter = {count: 0};
 
-		this.bindListeners({
-			handleIncrementCounter: CounterActions.INCREMENT_COUNTER
-		});
-	}
+    this.bindListeners({
+      incrementCounter: CounterActions.INCREMENT_COUNTER
+    });
 
-// prototype methods on this class are called action handlers
-	handleIncrementCounter(num){
-		console.log('received num ', num);
-		this.counter.count = this.counter.count++;
-	}
+	 this.exportPublicMethods({
+		getCounter: this.getCounter
+	 });
+  }
 
-	static getCounter(){
-		return this.counter;
-	}
+  incrementCounter(num) {
+    this.counter.count+= num;
+  }
+
+  getCounter(){
+	  var { counter } = this.getState();
+	  return counter;
+  }
 }
 
 module.exports = alt.createStore(CounterStore, 'CounterStore');
